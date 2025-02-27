@@ -1,3 +1,7 @@
+<?php if ($pTitle == 'Home'): ?>
+<div class="navbar-overlay">
+<?php endif; ?>
+
 <nav class="level">
   <p class="level-item item has-text-centered">
     <a class="link is-info">Discover Mutia</a>
@@ -15,3 +19,7 @@
     <a class="link is-info">News & Events</a>
   </p>
 </nav>
+
+<?php if ($pTitle == 'Home'): ?>
+</div> <!-- Close navbar-overlay -->
+<?php endif; ?>

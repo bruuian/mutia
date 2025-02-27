@@ -15919,7 +15919,7 @@ screen and (min-width:769px) {
     --bulma-hero-s: var(--bulma-info-s);
     --bulma-hero-background-l: var(--bulma-info-l);
     --bulma-hero-color-l: var(--bulma-info-invert-l);
-    background-color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-background-l));
+    background-color: #D1B8A2;
     color: hsl(var(--bulma-hero-h), var(--bulma-hero-s), var(--bulma-hero-color-l))
 }
 
@@ -16201,7 +16201,7 @@ screen and (min-width:769px) {
     display: flex;
     flex-direction: column;
     gap: var(--bulma-level-item-spacing);
-    padding-top: 30px;
+    padding-top: 15px;
     justify-content: space-between
 }
 
@@ -16248,7 +16248,9 @@ screen and (min-width:769px) {
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
-    justify-content: center
+    justify-content: center;
+    width: 30px;
+    height: 100px;
 }
 
 .level-item.item:hover {

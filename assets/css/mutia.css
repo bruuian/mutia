@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
 /* ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
@@ -15,6 +15,12 @@
     border: 2px solid #555555;
 } */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -25,20 +31,128 @@
     font-family: "Ramaraja", serif;
     font-weight: 400;
     font-style: normal;
+    text-shadow: 0.3px 0.3px 1px #000000;
     /* color: #333; */
     color: #ffffff;
     margin-bottom: 10px;
     text-transform: uppercase
 }
 
-.home-background {
-    filter: brightness(1.2) contrast(1.5) hue-rotate(-10deg) sepia(-1.0) drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
-    background-image: url('http://localhost/mutia/assets/img/Mutia_Municipal_Hall_2021.jpg');
-    background-size: cover; /* This ensures the image fully covers the background */
-    background-position: center;
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Lowest layer */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1; /* Puts content above the video */
+}
+
+.hero {
+    position: relative;
+    z-index: 1; /* Keeps it below the main content */
+    margin-top: 100vh; /* Adjust this value if needed */
+}
+
+.navbar-overlay {
+    position: relative;
+    z-index: 1000; /* Ensure navbar is above video */
+    background-color: rgba(0, 0, 0, 0); /* Add transparency */
+    padding: 10px 0;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the text vertically */
+    align-items: center; /* Centers the text horizontally */
+    height: 65vh; /* Makes sure it's full screen height */
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.welcome-title {
+    font-size: 6vw; /* Responsive font size */
+    font-family: "Ramaraja", serif; 
+    font-weight: 400;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: -11vh; /* Reduce the space between title and subtitle */
+}
+
+.welcome-subtitle {
+    font-size: 4vw; /* Responsive font size */
+    font-family: "Spirax", cursive;
+    text-shadow: 1px 1px 2px rgba(224, 255, 214, 0.511);
+    margin-top: 0; /* Remove unnecessary margin */
+    mix-blend-mode: color;
+    background: linear-gradient(90deg, rgba(68,180,62,1) 0%, rgba(32,163,60,1) 35%, rgba(20,139,50,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Ensures the gradient applies properly */
+    z-index: 2;
+}
+
+.hero-body.bg {
+    background: url('http://localhost/mutia/assets/img/discover.png');
     background-repeat: no-repeat;
-    width: 100vw; /* Makes it take the full viewport width */
-    height: 100vh; /* Makes it take the full viewport height */
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5vh;
+    border-top-right-radius: 5vh;
+}
+
+.discover-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Centers the text vertically */
+    align-items: left; /* Centers the text horizontally */
+    margin-top: 70px;
+    font-size: 61px;
+    font-family: "Ramaraja", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0.3px 0.3px 3px #0000007e;
+    /* color: #333; */
+    color: #ffffff;
+    margin-bottom: -3vh;
+}
+
+.discover-subtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: left; /* Centers the text vertically */
+    align-items: left; /* Centers the text horizontally */
+    font-family: 'Sen', sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    color: white;
+    text-shadow: 0.3px 0.3px 3px #0000007e;
+    width: 80%;
+}
+
+.discover-more {
+    font-size: 20px;
+    font-family: "Sen", serif;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    color: #F3D983;
+    text-shadow: 0.3px 0.3px 3px #0000007e;
+    margin-top: 40px;
 }
