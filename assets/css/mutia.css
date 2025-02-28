@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ramaraja&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 /* ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #F5F5F5;
@@ -31,9 +32,9 @@
     font-family: "Ramaraja", serif;
     font-weight: 400;
     font-style: normal;
-    text-shadow: 0.3px 0.3px 1px #000000;
+    text-shadow: 0.3px 0.3px 1px #ffffff;
     /* color: #333; */
-    color: #ffffff;
+    color: #000000;
     margin-bottom: 10px;
     text-transform: uppercase
 }
@@ -109,7 +110,7 @@
 }
 
 .hero-body.bg {
-    background: url('http://localhost/mutia/assets/img/discover.png');
+    background: url('https://bruuian.me/mutia/assets/img/discover.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -155,4 +156,79 @@
     color: #F3D983;
     text-shadow: 0.3px 0.3px 3px #0000007e;
     margin-top: 40px;
+}
+
+.arrow-icon {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.main-paragraph {
+    text-align: justify;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+    padding-bottom: 50px;
+}
+
+.discover-title-text {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #455EB0;
+}
+
+.discover-paragraph {
+    text-align: justify;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+.discover-paragraph::first-letter {
+    font-family: 'Sen', sans-serif;
+    font-size: 40px;
+}
+
+.discover-paragraph-end {
+    white-space: pre-line;
+    text-align: justify;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+.explore-title {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.explore-paragraph {
+    text-align: justify;
+    font-family: 'Sen', sans-serif;
+    font-size: 26px;
+    font-style: normal;
+    color: rgb(0, 0, 0);
 }
